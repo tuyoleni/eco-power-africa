@@ -31,7 +31,11 @@ export default function Home() {
       <HeroSection />
       <EnergySection />
       <SunSection />
+
+
       <BusinessCaseSection />
+
+
       <ReferencesSection />
       <BreakthroughSection />
       <QualitySection />
@@ -42,12 +46,7 @@ export default function Home() {
       <RenewableFutureSection />
       <BloombergArticleSection />
       <CapacityAdditionsSection />
-      <BusinessCaseFinanceSection />
-      <BusinessCasePPASection />
-      <BusinessCaseDiagramSection />
-      <BusinessCaseInfoSection />
       <Power2XBlocksSection />
-      <BusinessCaseDevelopmentSection />
       <TrekkopjeMineralRightsSection />
       <DesalinationPlantSection />
     </main>

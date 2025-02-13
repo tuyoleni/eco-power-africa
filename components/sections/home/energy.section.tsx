@@ -33,7 +33,7 @@ const carouselItems = [
 
 export default function EnergySection() {
     return (
-        <section className="relative w-full h-screen bg-white text-[#0A3D91] overflow-hidden flex items-center">
+        <section className="relative w-full py-20 bg-white text-[#0A3D91] overflow-hidden flex items-center">
             <div className="container mx-auto px-6 flex flex-col items-center justify-between">
                 <div className="flex flex-col mb-24 w-full">
                     <h1 className="text-3xl md:text-5xl font-bold mb-4">Sustainable Energy Solutions</h1>
