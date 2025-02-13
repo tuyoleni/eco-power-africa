@@ -1,66 +1,69 @@
-import Image from "next/image";
+import { Image } from "@heroui/react";
+import { Card } from "@/components/ui/card";
+import { sunburnspanel, litreDisel } from "@/public/assets"
+
 
 export default function SunSection() {
     return (
-        <section className="relative w-full min-h-screen bg-white text-[#0A3D91] overflow-hidden">
-            {/* Header with Title */}
-            <div className="container mx-auto px-6 py-8">
-                <div className="flex justify-between items-center">
-                    <h1 className="text-4xl font-bold tracking-wide">SUN - reliable power since 4 billion years</h1>
-                    <div className="flex items-center gap-4">
-                        <h2 className="text-2xl font-semibold text-right">
-                            ECO POWER AFRICA
-                            <span className="block text-lg font-normal">NAMIBIA INVEST CC</span>
-                        </h2>
-                        <div className="w-16 h-16 relative">
-                            <Image
-                                src="/logo.svg"
-                                alt="Eco Power Africa Logo"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </div>
+        <section className="relative w-full h-auto bg-white text-[#0A3D91] overflow-hidden flex items-center">
+            <div className="container mx-auto flex flex-col items-center">
+                <div className="flex flex-col mb-12 w-full pt-96">
+                    <p className="text-lg md:text-xl text-[#0A3D91]/80">
+                        God sends no bill for his inexhaustible energy source
+                    </p>
                 </div>
 
-                {/* Main Content */}
-                <div className="mt-20 space-y-12">
-                    {/* God's Energy Message */}
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold mb-8">God sends no bill for his inexhaustible energy source</h2>
-                    </div>
-
-                    {/* Solar Power Comparison */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        {/* Solar Panel Output */}
-                        <div className="bg-white/90 p-8 rounded-lg shadow-lg">
-                            <h3 className="text-2xl font-bold mb-6">Sun delivers per Square Meter in One Year</h3>
-                            <div className="relative w-full h-64">
-                                <Image
-                                    src="/solar-panel-desert.jpg"
-                                    alt="Solar Panel in Desert"
-                                    fill
-                                    className="object-cover rounded-lg"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Diesel Equivalent */}
-                        <div className="bg-white/90 p-8 rounded-lg shadow-lg">
-                            <h3 className="text-2xl font-bold mb-6">The energy equivalent of</h3>
-                            <div className="flex flex-col items-center">
-                                <div className="relative w-48 h-64 mb-4">
+                <div className="w-full space-y-12 md:space-y-24">
+                    <Card className="p-8 transition-opacity duration-300 hover:opacity-100 border-none shadow-none">
+                        <div className="flex flex-col md:flex-row gap-12 items-start">
+                            <div className="md:w-1/2">
+                                <div className="relative aspect-[4/3] w-full group flex items-center justify-center">
+                                    <div className="absolute inset-0 rounded-xl"></div>
                                     <Image
-                                        src="/diesel-barrel.jpg"
-                                        alt="120 Litre Diesel Barrel"
-                                        fill
-                                        className="object-contain"
+                                        radius="md"
+                                        isBlurred={true}
+                                        src={sunburnspanel}
+                                        alt="Solar Panel in Desert"
+                                        className="object-cover relative z-10 w-full h-full"
+                                        width={600}
+                                        height={450}
                                     />
                                 </div>
-                                <p className="text-3xl font-bold">120 litre Diesel</p>
+                            </div>
+                            <div className="md:w-1/2 space-y-4 pt-4">
+                                <h3 className="text-2xl md:text-3xl font-bold">Sun delivers per Square Meter in One Year</h3>
+                                <p className="text-base text-[#0A3D91]/70">
+                                    The sun provides an incredible amount of energy to every square meter of Earth's surface annually.
+                                </p>
                             </div>
                         </div>
-                    </div>
+                    </Card>
+
+                    <Card className="p-8 transition-opacity duration-300 hover:opacity-100 border-none shadow-none">
+                        <div className="flex flex-col md:flex-row-reverse gap-12 items-start">
+                            <div className="md:w-1/2">
+                                <div className="relative aspect-[4/3] w-full group flex items-center justify-center">
+                                    <div className="absolute inset-0 rounded-xl"></div>
+                                    <Image
+                                        radius="md"
+                                        isBlurred={true}
+                                        src={litreDisel}
+                                        alt="120 Litre Diesel Barrel"
+                                        className="object-contain relative z-10 w-full h-full"
+                                        width={600}
+                                        height={450}
+                                    />
+                                </div>
+                            </div>
+                            <div className="md:w-1/2 space-y-4">
+                                <h3 className="text-2xl md:text-3xl font-bold">The energy equivalent of</h3>
+                                <p className="text-base text-[#0A3D91]/70">
+                                    This amount of solar energy equals the power output of 120 litres of diesel fuel.
+                                </p>
+                                <p className="text-2xl font-bold">120 litre Diesel</p>
+                            </div>
+                        </div>
+                    </Card>
                 </div>
             </div>
         </section>

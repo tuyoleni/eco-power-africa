@@ -1,8 +1,8 @@
 'use client'
 
-import PresentationSection from "@/components/sections/presentation.section";
+import HeroSection from "@/components/sections/home/hero.section";
 import KeypointsSection from "@/components/sections/keypoints.section";
-import EnergySection from "@/components/sections/energy.section";
+import EnergySection from "@/components/sections/home/energy.section";
 import SunSection from "@/components/sections/sun.section";
 import BusinessCaseSection from "@/components/sections/business-case.section";
 import QualitySection from "@/components/sections/quality.section";
@@ -27,8 +27,8 @@ import DesalinationPlantSection from "@/components/sections/desalination-plant.s
 export default function Home() {
   return (
     <main>
-      <PresentationSection />
       <KeypointsSection />
+      <HeroSection />
       <EnergySection />
       <SunSection />
       <BusinessCaseSection />
