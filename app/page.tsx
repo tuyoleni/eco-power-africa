@@ -15,12 +15,7 @@ import ProductionCostSection from "@/components/sections/production-cost.section
 import RenewableFutureSection from "@/components/sections/renewable-future.section";
 import BloombergArticleSection from "@/components/sections/bloomberg-article.section";
 import CapacityAdditionsSection from "@/components/sections/capacity-additions.section";
-import BusinessCasePPASection from "@/components/sections/business-case-ppa.section";
-import BusinessCaseFinanceSection from "@/components/sections/business-case-finance.section";
-import BusinessCaseDiagramSection from "@/components/sections/business-case-diagram.section";
-import BusinessCaseInfoSection from "@/components/sections/business-case-info.section";
 import Power2XBlocksSection from "@/components/sections/power2x-blocks.section";
-import BusinessCaseDevelopmentSection from "@/components/sections/business-case-development.section";
 import TrekkopjeMineralRightsSection from "@/components/sections/trekkopje-mineral-rights.section";
 import DesalinationPlantSection from "@/components/sections/desalination-plant.section";
 
