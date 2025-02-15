@@ -1,43 +1,52 @@
 import Image from "next/image";
-import { Card } from "@/components/ui/card";
 import BusinessCaseDevelopmentSection from "./business-case-development.section";
-import BusinessCaseDiagramSection from "./business-case-diagram.section";
 import BusinessCaseFinanceSection from "./business-case-finance.section";
 import BusinessCasePPASection from "./business-case-ppa.section";
 import { arialView } from "@/public/assets";
+import { Zap, Database, Factory } from 'lucide-react';
 
 const cardData = [
     {
         title: "Power Generation",
         value: "2,000 MWp",
         subValue: "Megawatt Peak Capacity",
-        image: "/license-image.jpg",
-        alt: "Power Generation",
-        description: "Total licensed generation capacity"
+        description: "Total licensed generation capacity for sustainable power production across multiple phases",
+        details: "Scalable infrastructure designed for maximum efficiency",
+        section: "finance", // Ensure this links to the correct section
+        icon: Zap
     },
     {
         title: "Project Structure",
         value: "PPA Driven",
         subValue: "Build, Own & Operate Model",
-        image: "/phase-image.jpg",
-        alt: "Project Structure",
-        description: "Long-term sustainable operation model"
+        description: "Long-term sustainable operation model with guaranteed performance",
+        details: "25-year commitment to operational excellence",
+        section: "ppa", // Ensure this links to the correct section
+        icon: Factory
     },
     {
-        title: "Investment Model",
-        value: "30/70",
-        subValue: "Investment Ratio",
-        image: "/income-image.jpg",
-        alt: "Investment Model",
-        description: "Equity to debt ratio structure"
+        title: "Project Development",
+        value: "2,500 ha",
+        subValue: "TREKKOPJE Area",
+        description: "Strategic location with optimal solar radiation and existing infrastructure",
+        details: "Comprehensive development plan with overlapping interests",
+        section: "development", // Ensure this links to the correct section
+        icon: Database
     },
 ];
 
 export default function BusinessCaseSection() {
+    const scrollToSection = (section: string) => {
+        const element = document.getElementById(`business-case-${section}`);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className="relative w-full">
             {/* Hero Section */}
-            <div className="relative min-h-screen flex items-center">
+            <div className="relative h-[60vh] flex items-center">
                 <div className="absolute inset-0">
                     <Image
                         src={arialView}
@@ -51,48 +60,58 @@ export default function BusinessCaseSection() {
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="max-w-4xl mx-auto text-center mb-16">
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                    <div className="max-w-4xl text-left">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                             Business Case
-                        </h1>
-                        <p className="text-xl text-white/90 leading-relaxed">
-                            A comprehensive solar power initiative driving Namibia's sustainable energy future
+                        </h2>
+                        <p className="text-[#fff]/70 mt-6 max-w-3xl text-lg">
+                            A comprehensive solar power initiative driving Namibia's sustainable energy future through innovative infrastructure and strategic partnerships
                         </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                        {cardData.map((card, index) => (
-                            <Card
-                                key={index}
-                                className="group bg-white/10 backdrop-blur-md border-0 overflow-hidden hover:bg-white/20 transition-all duration-300"
-                            >
-                                <div className="relative h-48">
-                                    <Image
-                                        fill
-                                        src={card.image}
-                                        alt={card.alt}
-                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                                </div>
-                                <div className="p-6 relative">
-                                    <h3 className="text-lg font-medium text-white mb-2">{card.title}</h3>
-                                    <p className="text-3xl font-bold text-white mb-2">{card.value}</p>
-                                    <p className="text-white/70 text-sm">{card.subValue}</p>
-                                    <p className="mt-4 text-white/80 text-sm">{card.description}</p>
-                                </div>
-                            </Card>
-                        ))}
                     </div>
                 </div>
             </div>
 
-            {/* Content Sections with Improved Spacing */}
+            {/* Cards Section */}
+            <div className="container mx-auto relative w-full bg-white py-20">
+                <div className="max-w-7xl mx-auto px-8">
+                    <div className="grid md:grid-cols-3 gap-16">
+                        {cardData.map((card, index) => {
+                            const Icon = card.icon;
+                            return (
+                                <div
+                                    key={index}
+                                    onClick={() => scrollToSection(card.section)}
+                                    className="group cursor-pointer"
+                                >
+                                    <span className="text-sm font-medium text-[#0A3D91]/50 flex items-center gap-2">
+                                        <Icon className="w-4 h-4" />
+                                        {card.title}
+                                    </span>
+                                    <h3 className="text-2xl font-bold text-[#0A3D91] mt-2">{card.value}</h3>
+                                    <div className="text-base font-light text-[#0A3D91] mt-4">{card.subValue}</div>
+                                    <p className="text-[#0A3D91]/70 mt-3">{card.description}</p>
+                                    <p className="text-[#0A3D91]/50 text-sm mt-4 group-hover:text-[#0A3D91]/70 transition-colors">
+                                        {card.details}
+                                    </p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+            </div>
+
+            {/* Content Sections */}
             <div className="bg-white">
-                <div className="space-y-40 py-40">
-                    <BusinessCaseFinanceSection />
-                    <BusinessCasePPASection />
-                    <BusinessCaseDevelopmentSection />
+                <div className="space-y-32 py-32">
+                    <div id="business-case-finance">
+                        <BusinessCaseFinanceSection />
+                    </div>
+                    <div id="business-case-ppa">
+                        <BusinessCasePPASection />
+                    </div>
+                    <div id="business-case-development">
+                        <BusinessCaseDevelopmentSection />
+                    </div>
                 </div>
             </div>
         </section>

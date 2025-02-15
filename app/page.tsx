@@ -22,7 +22,6 @@ import DesalinationPlantSection from "@/components/sections/desalination-plant.s
 export default function Home() {
   return (
     <main>
-      <KeypointsSection />
       <HeroSection />
       <EnergySection />
       <SunSection />
@@ -39,8 +38,8 @@ export default function Home() {
       <GolmudChinaSection />
       <ProductionCostSection />
       <RenewableFutureSection />
-      <BloombergArticleSection />
-      <CapacityAdditionsSection />
+      {/* <BloombergArticleSection /> */}
+      {/* <CapacityAdditionsSection /> */}
       <Power2XBlocksSection />
       <TrekkopjeMineralRightsSection />
       <DesalinationPlantSection />

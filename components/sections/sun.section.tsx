@@ -1,12 +1,11 @@
-import { Image } from "@heroui/react";
-import { Card } from "@/components/ui/card";
+import Image from "next/image";
 import { sunburnspanel } from "@/public/assets";
 
 export default function SunSection() {
     return (
         <section className="w-full">
             <div className="container mx-auto px-4 py-20">
-                <div className="overflow-hidden ">
+                <div className="overflow-hidden">
                     <div className="flex flex-col md:flex-row-reverse items-start justify-between gap-12 p-8">
                         {/* Image Container */}
                         <div className="w-full md:w-1/3">
@@ -14,6 +13,7 @@ export default function SunSection() {
                                 <Image
                                     src={sunburnspanel}
                                     alt="Solar Panel Installation"
+                                    fill
                                     className="rounded-lg object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />

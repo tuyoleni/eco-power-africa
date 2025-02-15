@@ -1,21 +1,20 @@
 import React from 'react';
-import Image from 'next/image';
 import { LineChart } from "@/components/ui/line-chart";
 import type { ChartData, ChartOptions } from 'chart.js';
 
 export const ProductionCostSection = () => {
-    // Chart data representing the cost decline from 1980 to 2010
     const chartData: ChartData<'line'> = {
-        labels: ['1980', '1985', '1990', '1995', '2000', '2005', '2010'],
+        labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020', '2025', '2030'],
         datasets: [
             {
                 label: 'Production Cost',
-                data: [76, 30, 15, 10, 8, 6, 5],
-                borderColor: '#FFD700',
-                backgroundColor: 'rgba(255, 215, 0, 0.1)',
+                data: [0.762, 0.651, 0.448, 0.378, 0.223, 0.157, 0.048, 0.036, 0.024],
+                borderColor: '#003366',
+                backgroundColor: 'rgba(0, 51, 102, 0.1)',
                 borderWidth: 3,
                 tension: 0.4,
-                pointRadius: 0,
+                pointRadius: 6,
+                pointBackgroundColor: '#003366',
                 fill: true,
             }
         ]
@@ -25,21 +24,19 @@ export const ProductionCostSection = () => {
         scales: {
             y: {
                 beginAtZero: true,
-                max: 80,
+                max: 0.8,
                 grid: {
                     color: '#E5E7EB',
                 },
                 ticks: {
-                    callback: function (value) {
-                        return `$${value}`;
-                    },
+
                     font: {
                         size: 12,
                     },
                 },
                 title: {
                     display: true,
-                    text: 'US cents per kWh',
+                    text: 'US dollars per kWh',
                     font: {
                         size: 14,
                         weight: 'bold',
@@ -62,75 +59,63 @@ export const ProductionCostSection = () => {
                 display: false
             },
             tooltip: {
-                enabled: true,
-                mode: 'index',
-                intersect: false,
                 callbacks: {
-                    label: function (context) {
-                        return `$${context.parsed.y} cents/kWh`;
+                    label: function (context: { parsed: { y: number } }) {
+                        return `${(context.parsed.y * 100).toFixed(1)} cents/kWh`;
                     }
                 }
             }
-        },
-        interaction: {
-            intersect: false,
-            mode: 'index',
-        },
+        }
     };
 
     return (
-        <section className="relative w-full bg-white p-6">
-            {/* Header */}
-            <div className="flex items-center justify-between mb-8">
-                <h2 className="text-[#003366] text-2xl font-bold">
-                    WORLD SOLAR PV POWER PLANT MARKET
-                </h2>
-                <div className="flex items-center gap-2">
-                    <span className="text-lg">ECO POWER AFRICA</span>
-                    <span className="text-sm text-gray-600">NAMIBIA INVEST CC</span>
-                    <div className="w-12 h-12 relative">
-                        <Image
-                            src="/eco-power-logo.png"
-                            alt="Eco Power Africa Logo"
-                            fill
-                            className="object-contain"
-                        />
-                    </div>
+        <section className="relative w-full bg-white px-6 py-16">
+            <div className="max-w-7xl mx-auto">
+                <div className="max-w-3xl">
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#003366] mb-6 text-left">
+                        Solar Energy Cost Development
+                    </h2>
+                    <p className="text-lg text-[#003366]/70 leading-relaxed text-left mb-8">
+                        Since 1990, solar energy production costs have plummeted by over 90%,
+                        transforming it from an expensive alternative to one of the most affordable
+                        energy sources globally. By 2030, costs are projected to fall below 1 US cent
+                        per kWh.
+                    </p>
                 </div>
-            </div>
 
-            {/* Title */}
-            <h3 className="text-[#003366] text-3xl font-bold mb-8">
-                DEVELOPMENT OF PRODUCTION COST per kWh
-            </h3>
-
-            {/* Subtitle */}
-            <h4 className="text-2xl font-bold mb-6">
-                ECONOMY OF SCALE MADE IT HAPPEN
-            </h4>
-
-            {/* Chart Container */}
-            <div className="relative">
-                {/* Chart Section */}
-                <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-                    <div className="h-[400px]">
-                        <LineChart
-                            data={chartData}
-                            options={chartOptions}
-                        />
+                <div className="mt-12">
+                    <div className="bg-white">
+                        <div className="h-[500px]">
+                            <LineChart
+                                data={chartData}
+                                options={chartOptions}
+                            />
+                        </div>
                     </div>
                 </div>
 
-                {/* Current and Future Costs Box */}
-                <div className="absolute right-8 top-1/2 -translate-y-1/2 bg-yellow-400 p-6 rounded-xl shadow-lg">
-                    <div className="text-center space-y-2">
-                        <div className="text-4xl font-bold">1,5</div>
-                        <div className="text-xl font-medium">US- cents</div>
-                        <div className="text-xl">today</div>
-                        <div className="mt-4 text-2xl font-bold">2030</div>
-                        <div className="text-xl">below</div>
-                        <div className="text-4xl font-bold">1</div>
-                        <div className="text-xl">US cent</div>
+                <div className="mt-12 max-w-3xl">
+                    <div className="grid grid-cols-2 gap-16">
+                        <div className="flex items-start gap-4">
+                            <div className="text-6xl font-bold text-[#003366]">1.5</div>
+                            <div className="mt-2">
+                                <div className="text-2xl text-[#003366]/80">US cents</div>
+                                <div className="text-xl text-[#003366]/70">Current Production Cost</div>
+                                <p className="text-base text-[#003366]/60 mt-1">
+                                    Already competitive with traditional energy sources
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-4">
+                            <div className="text-6xl font-bold text-[#003366]">1</div>
+                            <div className="mt-2">
+                                <div className="text-2xl text-[#003366]/80">US cent</div>
+                                <div className="text-xl text-[#003366]/70">by 2030</div>
+                                <p className="text-base text-[#003366]/60 mt-1">
+                                    Making it the most economical energy source
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -138,4 +123,4 @@ export const ProductionCostSection = () => {
     );
 };
 
-export default ProductionCostSection; 
+export default ProductionCostSection;

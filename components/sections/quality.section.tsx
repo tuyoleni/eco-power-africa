@@ -1,87 +1,64 @@
 import Image from "next/image";
+import { Frame, Transformers, Inverter } from "@/public/assets";
+
+const qualityCards = [
+    {
+        title: "Power Transformers",
+        description: "High-performance dry-type transformers designed for maximum efficiency and minimal maintenance, ensuring reliable power distribution in your solar installation.",
+        image: Transformers,
+        alt: "Industrial dry-type transformers"
+    },
+    {
+        title: "Inverter Systems",
+        description: "Advanced inverter technology that optimizes power conversion, featuring smart monitoring capabilities and superior grid integration performance.",
+        image: Inverter,
+        alt: "Solar power inverter system"
+    },
+    {
+        title: "Mounting Solutions",
+        description: "Custom-engineered mounting frames and rack systems designed for durability and easy installation, optimized for various terrain conditions.",
+        image: Frame,
+        alt: "Solar panel mounting frame system"
+    }
+];
 
 export default function QualitySection() {
     return (
-        <section className="relative w-full min-h-screen bg-white text-[#0A3D91] overflow-hidden">
-            {/* Header with Title */}
-            <div className="container mx-auto px-6 py-8">
-                <div className="flex justify-between items-center">
-                    <h1 className="text-4xl font-bold tracking-wide">REFERENCES - more than 2.5 GWp installed</h1>
-                    <div className="flex items-center gap-4">
-                        <h2 className="text-2xl font-semibold text-right">
-                            ECO POWER AFRICA
-                            <span className="block text-lg font-normal">NAMIBIA INVEST CC</span>
-                        </h2>
-                        <div className="w-16 h-16 relative">
-                            <Image
-                                src="/logo.svg"
-                                alt="Eco Power Africa Logo"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                    </div>
+        <section className="relative w-full py-24 bg-gradient-to-b from-white to-gray-50 text-[#0A3D91]">
+            <div className="container mx-auto px-6">
+                {/* Header with Title */}
+                <div className="mb-20">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 relative">
+                        HIGH QUALITY FOR LIFE-CYCLE COSTING BENEFITS
+                    </h2>
+                    <p className="text-[#003366]/70 max-w-2xl leading-relaxed">
+                        Our commitment to quality ensures long-term reliability and optimal performance of your investment
+                    </p>
                 </div>
 
-                {/* Main Content */}
-                <div className="mt-20">
-                    {/* Title */}
-                    <div className="mb-16">
-                        <h2 className="text-3xl font-bold text-center border-2 border-yellow-400 py-4 px-8 inline-block">
-                            HIGH QUALITY FOR LIFE-CYCLE COSTING BENEFITS
-                        </h2>
-                    </div>
-
-                    {/* Quality Points */}
-                    <div className="space-y-12 max-w-4xl mx-auto">
-                        {/* Transformers */}
-                        <div className="flex items-start gap-8">
-                            <div className="w-1/3 relative h-48">
+                {/* Quality Points Grid */}
+                <div className="grid md:grid-cols-3 gap-8 max-w-7xl">
+                    {qualityCards.map((card, index) => (
+                        <div
+                            key={index}
+                            className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                        >
+                            <div className="relative h-64">
                                 <Image
-                                    src="/transformers.jpg"
-                                    alt="Dry-type transformers"
+                                    src={card.image}
+                                    alt={card.alt}
                                     fill
-                                    className="object-cover rounded-lg"
+                                    className="object-cover"
                                 />
                             </div>
-                            <div className="flex-1">
-                                <h3 className="text-2xl font-semibold mb-4">Transformers</h3>
-                                <p className="text-lg">Reliability and ease of sustaining of dry-type transformers justify higher investment costs</p>
+                            <div className="p-6">
+                                <h3 className="text-xl font-semibold mb-3">{card.title}</h3>
+                                <p className="text-[#003366]/70 leading-relaxed">
+                                    {card.description}
+                                </p>
                             </div>
                         </div>
-
-                        {/* Support Frame */}
-                        <div className="flex items-start gap-8">
-                            <div className="w-1/3 relative h-48">
-                                <Image
-                                    src="/inverter.jpg"
-                                    alt="Support frame and inverter"
-                                    fill
-                                    className="object-cover rounded-lg"
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <h3 className="text-2xl font-semibold mb-4">Support Frame</h3>
-                                <p className="text-lg">Innovative construction saves material and especially assembly costs</p>
-                            </div>
-                        </div>
-
-                        {/* Long-term Service */}
-                        <div className="flex items-start gap-8">
-                            <div className="w-1/3 relative h-48">
-                                <Image
-                                    src="/rack-system.jpg"
-                                    alt="6.4 km custom designed rack system"
-                                    fill
-                                    className="object-cover rounded-lg"
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <h3 className="text-2xl font-semibold mb-4">Long-term Service</h3>
-                                <p className="text-lg">Long-term service contracts and a PV plant design targeted at longevity give investors a high degree of security.</p>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>

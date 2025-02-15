@@ -1,6 +1,8 @@
 ### Objective:
 Revamp the specified sections of the website to enhance visual appeal, improve user experience, and align with Apple’s design philosophy, focusing on simplicity, clarity, and user-friendliness.
 
+dont change the content, but add to it to make it more clear and informative
+
 ### 1. Identify Sections for Update:
 *   List the specific sections or pages of your website that need improvement (e.g., "Homepage header," "Product page gallery," "About Us section").
 
@@ -66,6 +68,7 @@ Revamp the specified sections of the website to enhance visual appeal, improve u
 *   Gather user feedback and iterate on the design based on the results[2].
 
 Typography Scale:
+- Text aligned left
 - Headings:
   - Main heading (h2): text-3xl md:text-4xl (1.875rem/30px, scales to 2.25rem/36px on medium screens)
   - Card headings (h3): text-xl (1.25rem/20px)

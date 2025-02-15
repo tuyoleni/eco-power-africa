@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sun, FileText, Power, ArrowRight } from 'lucide-react';
+import { Sun, FileText, Power } from 'lucide-react';
 
 interface ProcessStep {
     icon: React.ElementType;
@@ -33,94 +33,92 @@ const processSteps: ProcessStep[] = [
     }
 ];
 
-const ProcessStepCard = ({
-    step,
-    index,
-    total
-}: {
-    step: ProcessStep;
-    index: number;
-    total: number;
-}) => {
-    const { icon: Icon, title, description, value, subtext } = step;
-    return (
-        <div className="relative group h-full">
-            <div className="bg-white p-8 rounded-2xl border border-[#003366]/10 hover:shadow-xl transition-all duration-300 ease-in-out h-full flex flex-col">
-                <div className="w-12 h-12 mb-6 text-[#003366] group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-full h-full" />
-                </div>
-                <h3 className="text-xl font-semibold text-[#003366] mb-3">
-                    {title}
-                </h3>
-                <p className="text-[#003366]/70 mb-6 leading-relaxed flex-grow">
-                    {description}
-                </p>
-                <div className="pt-4 border-t border-[#003366]/10">
-                    <div className="text-2xl font-bold text-[#003366] group-hover:text-[#003366]/80 transition-colors">
-                        {value}
-                    </div>
-                    <div className="text-sm text-[#003366]/70">
-                        {subtext}
-                    </div>
-                </div>
-            </div>
-            {index < total - 1 && (
-                <div className="hidden md:flex absolute top-1/2 -right-4 items-center transform -translate-y-1/2">
-                    <ArrowRight className="w-6 h-6 text-[#003366]/20" />
-                </div>
-            )}
-        </div>
-    );
-};
-
 export const BusinessCasePPASection = () => {
     return (
-        <section className="w-full py-16">
-            <div className="container mx-auto px-6">
-                {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
-                    <div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#003366]">
-                            Power Purchase Agreement
-                        </h2>
-                        <p className="text-[#003366]/70 mt-2">
-                            Build-Own-Operate Model
-                        </p>
-                    </div>
+        <section className="container mx-auto relative w-full bg-white py-20">
+            {/* Header */}
+            <div className="px-8 mb-24">
+                <h2 className="text-4xl md:text-5xl font-bold text-[#003366]">
+                    Power Purchase Agreement
+                </h2>
+                <p className="text-[#003366]/70 text-xl mt-6 max-w-3xl">
+                    Our Build-Own-Operate Model ensures long-term sustainable energy supply through 
+                    strategic partnerships and efficient infrastructure management.
+                </p>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-8">
+                {/* Process Steps */}
+                <div className="grid md:grid-cols-3 gap-16 mb-24">
+                    {processSteps.map((step, index) => {
+                        const Icon = step.icon;
+                        return (
+                            <div key={index}>
+                                <span className="text-sm font-medium text-[#003366]/50 flex items-center gap-2">
+                                    <Icon className="w-4 h-4" />
+                                    Stage {String(index + 1).padStart(2, '0')}
+                                </span>
+                                <h3 className="text-2xl font-bold text-[#003366] mt-2">{step.title}</h3>
+                                <div className="text-4xl font-light text-[#003366] mt-4">{step.value}</div>
+                                <p className="text-[#003366]/70 mt-3">{step.description}</p>
+                                <p className="text-sm text-[#003366]/70 mt-4">{step.subtext}</p>
+                            </div>
+                        );
+                    })}
                 </div>
 
-                {/* Main Content */}
-                <div className="max-w-6xl">
-                    {/* PPA Process Flow */}
-                    <div className="mb-16">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {processSteps.map((step, index) => (
-                                <ProcessStepCard
-                                    key={index}
-                                    step={step}
-                                    index={index}
-                                    total={processSteps.length}
-                                />
-                            ))}
+                {/* Detailed Information */}
+                <div className="bg-[#003366] rounded-lg p-8 text-white">
+                    <h3 className="text-2xl font-bold mb-8">PPA Structure & Benefits</h3>
+
+                    <div className="grid md:grid-cols-2 gap-12 divide-x divide-white/10">
+                        <div className="pr-12">
+                            <h4 className="text-xl font-medium mb-4">Key Features</h4>
+                            <div className="space-y-4 text-white/80">
+                                <div>
+                                    <p className="font-medium mb-2">Sustainable Generation</p>
+                                    <p className="text-sm leading-relaxed">
+                                        State-of-the-art solar installation with 2,000 MWp capacity, 
+                                        providing clean and reliable energy.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="font-medium mb-2">Long-term Commitment</p>
+                                    <p className="text-sm leading-relaxed">
+                                        25-year agreement ensuring stable energy supply and 
+                                        infrastructure maintenance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="pl-12">
+                            <h4 className="text-xl font-medium mb-4">Partner Benefits</h4>
+                            <div className="space-y-4 text-white/80">
+                                <div>
+                                    <p className="font-medium mb-2">Predictable Costs</p>
+                                    <p className="text-sm leading-relaxed">
+                                        Stable, long-term energy pricing structure with 
+                                        transparent terms and conditions.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="font-medium mb-2">Infrastructure Support</p>
+                                    <p className="text-sm leading-relaxed">
+                                        Seamless integration with existing systems and 
+                                        guaranteed performance standards.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Detailed Description */}
-                    <div className="max-w-4xl">
-                        <h3 className="text-xl font-semibold text-[#003366] mb-6">
-                            Understanding Our PPA Structure
-                        </h3>
-                        <div className="space-y-6 text-[#003366]/70">
-                            <p>
-                                Our Power Purchase Agreement (PPA) represents a cornerstone of sustainable energy development in Namibia. Through this agreement, we establish a direct relationship between power generation and consumption, ensuring reliable and sustainable energy supply for decades to come.
-                            </p>
-                            <p>
-                                The process begins with our state-of-the-art solar installation, capable of generating 2,000 MWp of clean energy. This power is then distributed through our sophisticated grid network, backed by a 25-year commitment to maintaining and operating these facilities at peak efficiency.
-                            </p>
-                            <p>
-                                By choosing our PPA solution, partners gain access to stable, predictable energy costs while contributing to Namibia's renewable energy goals. Our end-to-end approach ensures seamless integration with existing infrastructure and guaranteed performance throughout the agreement's duration.
-                            </p>
-                        </div>
+                    <div className="mt-12 pt-8 border-t border-white/10">
+                        <p className="text-sm text-white/80">
+                            <span className="font-medium">Note:</span> Our PPA structure is designed 
+                            to support Namibia's renewable energy goals while providing partners with 
+                            reliable, sustainable power solutions.
+                        </p>
                     </div>
                 </div>
             </div>

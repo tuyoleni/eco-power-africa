@@ -1,68 +1,127 @@
 import React from 'react';
 import Image from 'next/image';
+import { Droplet, Zap, Factory, ArrowUpCircle } from 'lucide-react';
+import { interior, exterior } from '@/public/assets';
 
 export const DesalinationPlantSection = () => {
     return (
-        <section className="relative w-full bg-white p-6">
+        <section className="container mx-auto relative w-full bg-white py-20">
             {/* Header */}
-            <div className="flex items-center justify-between mb-8">
-                <h2 className="text-[#003366] text-2xl font-bold">
-                    BUSINESS CASE – DESALINATION PLANT
+            <div className="px-8 mb-24">
+                <h2 className="text-4xl md:text-5xl font-bold text-[#003366]">
+                    Desalination Infrastructure
                 </h2>
-                <div className="flex items-center gap-2">
-                    <span className="text-lg">ECO POWER AFRICA</span>
-                    <span className="text-sm text-gray-600">NAMIBIA INVEST CC</span>
-                    <div className="w-12 h-12 relative">
-                        <Image
-                            src="/eco-power-logo.png"
-                            alt="Eco Power Africa Logo"
-                            fill
-                            className="object-contain"
-                        />
-                    </div>
-                </div>
+                <p className="text-[#003366]/70 mt-6 max-w-3xl">
+                    Advanced water treatment facility integrated with renewable energy systems,
+                    providing sustainable water solutions for hydrogen production and industrial processes.
+                </p>
             </div>
 
-            {/* Main Content */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Left Column - Key Points */}
-                <div className="space-y-6">
-                    <h3 className="text-[#003366] text-2xl font-bold">Key Components:</h3>
-                    <ul className="space-y-4 text-lg">
-                        <li className="flex items-start gap-2">
-                            <span className="text-[#003366] font-bold">a.</span>
-                            <span className="text-[#003366]">water supply Hydrogen production</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="text-[#003366] font-bold">b.</span>
-                            <span className="text-[#003366]">energy supply from ECO - POWER</span>
-                        </li>
-                    </ul>
+            <div className="max-w-7xl mx-auto px-8">
+                {/* Process Components */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 mb-24">
+                    {/* Component 1 */}
+                    <div>
+                        <span className="text-sm font-medium text-[#003366]/50 flex items-center gap-2">
+                            <Droplet className="w-4 h-4" />
+                            Component 01
+                        </span>
+                        <h3 className="text-2xl font-bold text-[#003366] mt-2">Water Treatment</h3>
+                        <div className="text-4xl font-light text-[#003366] mt-4">20M L/day</div>
+                        <p className="text-[#003366]/70 mt-3">Advanced desalination and purification systems</p>
+                        <ul className="mt-4 space-y-2 text-sm text-[#003366]/70">
+                            <li>• Multi-stage filtration</li>
+                            <li>• Reverse osmosis technology</li>
+                            <li>• Quality monitoring systems</li>
+                        </ul>
+                    </div>
 
-                    {/* Interior Plant Image */}
-                    <div className="relative w-full aspect-video rounded-lg overflow-hidden">
-                        <Image
-                            src="/desalination-interior.jpg"
-                            alt="Desalination Plant Interior"
-                            fill
-                            className="object-cover"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm">
-                            Interior view of desalination plant machinery and piping systems
-                        </div>
+                    {/* Component 2 */}
+                    <div>
+                        <span className="text-sm font-medium text-[#003366]/50 flex items-center gap-2">
+                            <Zap className="w-4 h-4" />
+                            Component 02
+                        </span>
+                        <h3 className="text-2xl font-bold text-[#003366] mt-2">Energy Integration</h3>
+                        <div className="text-4xl font-light text-[#003366] mt-4">100%</div>
+                        <p className="text-[#003366]/70 mt-3">Renewable energy powered operations</p>
+                        <ul className="mt-4 space-y-2 text-sm text-[#003366]/70">
+                            <li>• Solar power integration</li>
+                            <li>• Energy efficiency systems</li>
+                            <li>• Smart grid connection</li>
+                        </ul>
+                    </div>
+
+                    {/* Component 3 */}
+                    <div>
+                        <span className="text-sm font-medium text-[#003366]/50 flex items-center gap-2">
+                            <Factory className="w-4 h-4" />
+                            Component 03
+                        </span>
+                        <h3 className="text-2xl font-bold text-[#003366] mt-2">Distribution Network</h3>
+                        <div className="text-4xl font-light text-[#003366] mt-4">24/7</div>
+                        <p className="text-[#003366]/70 mt-3">Continuous supply infrastructure</p>
+                        <ul className="mt-4 space-y-2 text-sm text-[#003366]/70">
+                            <li>• Automated distribution</li>
+                            <li>• Real-time monitoring</li>
+                            <li>• Maintenance protocols</li>
+                        </ul>
                     </div>
                 </div>
 
-                {/* Right Column - Exterior Image */}
-                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
-                    <Image
-                        src="/desalination-exterior.jpg"
-                        alt="Desalination Plant Exterior"
-                        fill
-                        className="object-cover"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm">
-                        Aerial view of the desalination plant facility
+                {/* Technical Details */}
+                <div className="bg-[#003366] rounded-lg p-8 text-white">
+                    <h3 className="text-2xl font-bold mb-8">Facility Overview</h3>
+
+                    <div className="grid md:grid-cols-2 gap-12 divide-x divide-white/10">
+                        <div className="pr-12">
+                            <h4 className="text-xl font-medium mb-4">Plant Infrastructure</h4>
+                            <div className="space-y-4 text-white/80">
+                                <div className="relative aspect-video rounded-lg overflow-hidden">
+                                    <Image
+                                        src={interior}
+                                        alt="Desalination Plant Interior"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                                <div>
+                                    <p className="font-medium mb-2">Processing Systems</p>
+                                    <p className="text-sm leading-relaxed">
+                                        State-of-the-art machinery and piping systems designed for optimal efficiency
+                                        and reliability in water treatment processes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="pl-12">
+                            <h4 className="text-xl font-medium mb-4">Operational Metrics</h4>
+                            <div className="space-y-6">
+                                <div>
+                                    <p className="text-sm text-white/80 mb-2">Daily Production Capacity</p>
+                                    <p className="text-3xl font-light flex items-center gap-2">
+                                        <ArrowUpCircle className="w-8 h-8 text-white/80" />
+                                        20M Liters
+                                    </p>
+                                </div>
+                                <div>
+                                    <p className="text-sm text-white/80 mb-2">Energy Efficiency Rating</p>
+                                    <p className="text-3xl font-light flex items-center gap-2">
+                                        <ArrowUpCircle className="w-8 h-8 text-white/80" />
+                                        95%
+                                    </p>
+                                </div>
+                                <div className="relative aspect-video rounded-lg overflow-hidden mt-6">
+                                    <Image
+                                        src={exterior}
+                                        alt="Desalination Plant Exterior"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,4 +129,4 @@ export const DesalinationPlantSection = () => {
     );
 };
 
-export default DesalinationPlantSection; 
+export default DesalinationPlantSection;

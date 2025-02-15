@@ -4,38 +4,31 @@ import { AreaChart } from "@/components/ui/area-chart";
 import type { ChartData, ChartOptions } from 'chart.js';
 
 export const RenewableFutureSection = () => {
-    // Chart data for capacity additions by technology
     const chartData: ChartData<'line'> = {
-        labels: ['2015', '2020', '2025', '2030', '2035', '2040'],
+        labels: ['2023', '2025', '2027', '2030'],
         datasets: [
             {
-                label: 'Flexible Capacity',
-                data: [10, 15, 25, 35, 45, 50],
-                backgroundColor: '#9333EA', // Purple
-                fill: true,
-            },
-            {
-                label: 'Other Renewables',
-                data: [20, 30, 45, 60, 75, 85],
-                backgroundColor: '#22C55E', // Green
+                label: 'Solar',
+                data: [1.6, 2.5, 3.5, 4.5],
+                backgroundColor: '#4B88E5', // Primary Blue
                 fill: true,
             },
             {
                 label: 'Wind',
-                data: [40, 60, 85, 110, 140, 160],
-                backgroundColor: '#60A5FA', // Blue
+                data: [1.0, 1.5, 2.0, 2.5],
+                backgroundColor: '#4BE5C9', // Turquoise
                 fill: true,
             },
             {
-                label: 'Solar',
-                data: [60, 100, 150, 200, 250, 300],
-                backgroundColor: '#FCD34D', // Yellow
+                label: 'Other Renewables',
+                data: [1.5, 1.8, 2.1, 2.5],
+                backgroundColor: '#E5964B', // Orange
                 fill: true,
             },
             {
                 label: 'Fossil Fuels',
-                data: [150, 140, 130, 120, 110, 100],
-                backgroundColor: '#EF4444', // Red
+                data: [4.8, 4.5, 4.2, 3.8],
+                backgroundColor: '#E54B4B', // Red-Orange
                 fill: true,
             },
         ]
@@ -47,15 +40,19 @@ export const RenewableFutureSection = () => {
                 stacked: true,
                 title: {
                     display: true,
-                    text: 'Global gross annual capacity additions (GW)',
+                    text: 'Global Power Capacity (TW)',
+                    color: '#003366',
+                    font: {
+                        size: 14,
+                    }
                 },
                 grid: {
-                    color: 'rgba(255, 255, 255, 0.1)',
+                    color: 'rgba(0, 51, 102, 0.1)',
                 }
             },
             x: {
                 grid: {
-                    color: 'rgba(255, 255, 255, 0.1)',
+                    color: 'rgba(0, 51, 102, 0.1)',
                 }
             }
         },
@@ -64,6 +61,10 @@ export const RenewableFutureSection = () => {
                 position: 'bottom',
                 labels: {
                     usePointStyle: true,
+                    padding: 20,
+                    font: {
+                        size: 12
+                    }
                 }
             }
         },
@@ -74,77 +75,50 @@ export const RenewableFutureSection = () => {
     };
 
     return (
-        <section className="relative w-full bg-white p-6">
-            {/* Header */}
-            <div className="flex items-center justify-between mb-8">
-                <h2 className="text-[#003366] text-2xl font-bold">
-                    WORLD SOLAR PV POWER PLANT MARKET
+        <section className="container mx-auto relative w-full py-20 px-8">
+            <div className="gap-4 mb-20 max-w-2xl">
+                <h2 className="text-3xl font-bold text-[#003366] mb-6">
+                    Global Renewable Power Capacity Set to Triple by 2030
                 </h2>
-                <div className="flex items-center gap-2">
-                    <span className="text-lg">ECO POWER AFRICA</span>
-                    <span className="text-sm text-gray-600">NAMIBIA INVEST CC</span>
-                    <div className="w-12 h-12 relative">
-                        <Image
-                            src="/eco-power-logo.png"
-                            alt="Eco Power Africa Logo"
-                            fill
-                            className="object-contain"
-                        />
-                    </div>
-                </div>
-            </div>
-
-            {/* Bloomberg Article Section */}
-            <div className="bg-[#1a1a1a] text-white p-6 rounded-lg mb-8">
-                <div className="flex items-center gap-4 mb-4">
-                    <Image
-                        src="/bloomberg-logo.png"
-                        alt="Bloomberg Logo"
-                        width={120}
-                        height={30}
-                        className="object-contain"
-                    />
-                    <div className="text-sm text-gray-400">June 23, 2016 — 3:00 PM GST</div>
-                </div>
-
-                <h3 className="text-4xl font-bold mb-4">
-                    The Way Humans Get Electricity Is About to Change Forever
-                </h3>
-                <p className="text-gray-300 mb-4">
-                    These six shifts will transform markets over the next 25 years
+                <p className="text-[#003366]/70">
+                    According to BloombergNEF, global renewable power capacity is expected to reach approximately
+                    10.3 terawatts (TW) by 2030, up from 4.1 TW at the end of 2023, marking a transformative
+                    shift in how we generate electricity.
                 </p>
-
-                <div className="text-gray-200 space-y-4">
-                    <p>
-                        The renewable-energy boom is here. Trillions of dollars will be invested over the next 25
-                        years, driving some of the most profound changes yet in how humans get their electricity.
-                    </p>
-                    <div className="space-y-4">
-                        <h4 className="text-xl font-bold">1. Solar Prices Keep Crashing</h4>
-                        <p>
-                            The price of solar power will continue to fall, until it becomes the cheapest form of power
-                            in a rapidly expanding number of national markets. By 2026, utility-scale solar will be
-                            competitive for the majority of the world.
-                        </p>
-                        <h4 className="text-xl font-bold">2. Solar Billions Become Solar Trillions</h4>
-                        <p>
-                            With solar power so cheap, investments will surge. Expect $3.7 trillion in solar
-                            investments between now and 2040.
-                        </p>
-                    </div>
-                </div>
             </div>
 
-            {/* Chart Section */}
-            <div className="bg-black p-6 rounded-lg">
-                <h4 className="text-white text-xl font-bold mb-4">
-                    Global gross annual capacity additions by technology, 2015-2040 (GW)
-                </h4>
-                <div className="h-[400px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div className="h-[600px]">
                     <AreaChart
                         data={chartData}
                         options={chartOptions}
                     />
+                </div>
+
+                <div className="space-y-6 text-[#003366]/70 leading-relaxed">
+                    <div className="space-y-6">
+                        <div>
+                            <p className="font-semibold text-[#003366] mb-2">
+                                1. Solar Prices Continue to Decline
+                            </p>
+                            <p>
+                                The cost of solar power has been decreasing rapidly, making it increasingly
+                                competitive with traditional energy sources. BloombergNEF projects that this trend
+                                will continue, contributing significantly to the global energy mix by 2030.
+                            </p>
+                        </div>
+                        <div>
+                            <p className="font-semibold text-[#003366] mb-2">
+                                2. Massive Investments in Renewable Energy
+                            </p>
+                            <p>
+                                BloombergNEF forecasts that achieving the necessary renewable capacity by 2030
+                                will require substantial investments, averaging around $1 trillion per year globally.
+                                This investment is crucial to meet the net-zero emissions pathway and support the
+                                rapid expansion of renewable energy infrastructure.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
