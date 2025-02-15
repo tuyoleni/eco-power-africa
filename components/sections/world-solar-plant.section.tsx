@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Map from '../map';
 import { LatLngTuple } from 'leaflet';
 
 export const WorldSolarPlantSection = () => {
+    // Example of using useEffect to access window
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            // Safe to use window here
+            console.log(window.innerWidth);
+        }
+    }, []);
+
     const center: LatLngTuple = [35.3880, -120.0726];
     return (
         <section className="relative w-full min-h-screen bg-gradient-to-b from-white to-gray-50 text-[#0A3D91] overflow-hidden">
