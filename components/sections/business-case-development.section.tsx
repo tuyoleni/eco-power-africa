@@ -41,7 +41,7 @@ export const BusinessCaseDevelopmentSection = () => {
             {/* Description */}
             <div className="max-w-3xl mt-14">
                 <p className="text-[#003366]/70 leading-relaxed">
-                    Situated in the heart of Namibia's Erongo Region, the Trekkopje site presents a strategic opportunity for renewable energy development. With 2,500 hectares of available land and key infrastructure points already identified, this location offers optimal conditions for solar power installation and sustainable energy generation.
+                    Situated in the heart of Namibia&apos;s Erongo Region, the Trekkopje site presents a strategic opportunity for renewable energy development. With 2,500 hectares of available land and key infrastructure points already identified, this location offers optimal conditions for solar power installation and sustainable energy generation.
                 </p>
             </div>
         </section>
