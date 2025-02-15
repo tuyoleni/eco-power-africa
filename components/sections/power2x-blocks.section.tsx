@@ -25,7 +25,7 @@ export const Power2XBlocksSection = () => {
                         </span>
                         <h3 className="text-2xl font-bold text-[#003366] mt-2">Clean Power Production</h3>
                         <div className="text-4xl font-light text-[#003366] mt-4">1.6 USC</div>
-                        <p className="text-[#003366]/70 mt-3">Harnessing the sun's energy through high-efficiency solar panels</p>
+                        <p className="text-[#003366]/70 mt-3">Harnessing the sun&apos;s energy through high-efficiency solar panels</p>
                         <ul className="mt-4 space-y-2 text-sm text-[#003366]/70">
                             <li>• High-efficiency solar arrays</li>
                             <li>• Sustainable energy source</li>

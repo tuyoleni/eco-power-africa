@@ -76,7 +76,7 @@ export const ProductionCostSection = () => {
                         Solar Energy Cost Development
                     </h2>
                     <p className="text-lg text-[#003366]/70 leading-relaxed text-left mb-8">
-                        From an expensive alternative to the world's most affordable energy source—solar power costs have dropped by over 90% since 1990 and are projected to fall below 1 US cent per kWh by 2030, making it the most economical choice for sustainable power generation.
+                        From an expensive alternative to the world&apos;s most affordable energy source—solar power costs have dropped by over 90% since 1990 and are projected to fall below 1 US cent per kWh by 2030, making it the most economical choice for sustainable power generation.
                     </p>
                 </div>
 

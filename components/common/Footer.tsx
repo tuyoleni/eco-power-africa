@@ -26,7 +26,10 @@ export default function AppFooter() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Eco Power Africa</h3>
             <p className="text-white/70 text-sm">
-              Pioneering sustainable energy solutions for Africa's renewable future.
+              Pioneering sustainable energy solutions for Africa&apos;s renewable future.
+            </p>
+            <p className="text-white/70 text-sm mt-4">
+              Built with passion by <a href="https://www.moodbod.design" className="text-white hover:text-white/90 transition-colors">moodbod.design</a> and brought to you by <a href="https://www.fessynam.com" className="text-white hover:text-white/90 transition-colors">fessynam.com</a>
             </p>
           </div>
 
