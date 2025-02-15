@@ -1,65 +1,51 @@
 import React from 'react';
-import Image from 'next/image';
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('../map'), { ssr: false });
 
 export const BusinessCaseDevelopmentSection = () => {
     return (
-        <section className="relative w-full bg-white p-6">
-            {/* Header */}
-            <div className="flex items-center justify-between mb-8">
-                <h2 className="text-[#003366] text-2xl font-bold">
-                    BUSINESS CASE – DEVELOPMENT
-                </h2>
-                <div className="flex items-center gap-2">
-                    <span className="text-lg">ECO POWER AFRICA</span>
-                    <span className="text-sm text-gray-600">NAMIBIA INVEST CC</span>
-                    <div className="w-12 h-12 relative">
-                        <Image
-                            src="/eco-power-logo.png"
-                            alt="Eco Power Africa Logo"
-                            fill
-                            className="object-contain"
-                        />
+        <section className="relative container mx-auto w-full bg-white p-6">
+            <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-2xl mb-8">
+                <Map
+                    center={[-22.2372, 15.0324]}
+                    zoom={15}
+                    polygonPoints={[
+                        [-22.2272, 15.0224],
+                        [-22.2372, 15.0324],
+                        [-22.2472, 15.0424],
+                        [-22.2372, 15.0524],
+                        [-22.2272, 15.0224],
+                    ]}
+                    polygonOptions={{
+                        color: '#003366',
+                        weight: 2,
+                        fillOpacity: 0.1
+                    }}
+                />
+
+                {/* Area Information */}
+                <div className="absolute bottom-4 left-4 bg-white/60 p-6 rounded-xl shadow-lg backdrop-blur-md z-[999] transition-all hover:bg-white/80">
+                    <h3 className="text-xl font-bold text-[#003366] mb-2">
+                        TREKKOPJE
+                    </h3>
+                    <div className="text-2xl font-bold text-[#003366] mb-1">
+                        2.500 ha
+                    </div>
+                    <div className="text-sm text-[#003366]/70">
+                        overlapping interests
                     </div>
                 </div>
             </div>
 
-            {/* Map Container */}
-            <div className="relative w-full aspect-[16/9]">
-                {/* Satellite Map */}
-                <div className="relative w-full h-full">
-                    <Image
-                        src="/trekkopje-map.jpg"
-                        alt="Trekkopje Area Satellite View"
-                        fill
-                        className="object-cover rounded-lg"
-                    />
-
-                    {/* Area Overlay */}
-                    <div className="absolute inset-0">
-                        {/* Red boundary lines would be drawn here */}
-                        {/* This could be achieved with SVG or border styling */}
-                    </div>
-
-                    {/* Area Information */}
-                    <div className="absolute top-4 right-4 bg-white/90 p-4 rounded-lg shadow-lg">
-                        <h3 className="text-[#003366] text-3xl font-bold mb-2">
-                            TREKKOPJE
-                        </h3>
-                        <div className="text-2xl font-bold text-[#003366]">
-                            2.500 ha
-                        </div>
-                        <div className="text-lg text-[#003366]">
-                            overlapping interests
-                        </div>
-                    </div>
-
-                    {/* Markers */}
-                    <div className="absolute top-[15%] right-[20%] w-4 h-4 bg-yellow-400 rounded-full" />
-                    <div className="absolute bottom-[20%] right-[10%] w-4 h-4 bg-yellow-400 rounded-full" />
-                </div>
+            {/* Description */}
+            <div className="max-w-3xl mt-14">
+                <p className="text-[#003366]/70 leading-relaxed">
+                    Situated in the heart of Namibia's Erongo Region, the Trekkopje site presents a strategic opportunity for renewable energy development. With 2,500 hectares of available land and key infrastructure points already identified, this location offers optimal conditions for solar power installation and sustainable energy generation.
+                </p>
             </div>
         </section>
     );
 };
 
-export default BusinessCaseDevelopmentSection; 
+export default BusinessCaseDevelopmentSection;
