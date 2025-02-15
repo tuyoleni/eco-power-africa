@@ -10,9 +10,7 @@ export const Power2XBlocksSection = () => {
                     Power2X Process
                 </h2>
                 <p className="text-[#003366]/70 mt-6 max-w-3xl">
-                    Our innovative process transforms solar energy into green hydrogen fuel through
-                    a four-stage system. Each stage is optimized for efficiency and sustainability,
-                    with costs measured in USC (US Cents) per kilowatt-hour.
+                    Power2X is the future of energy conversion—turning abundant solar power into clean hydrogen fuel. Our efficient four-stage system ensures affordability and sustainability at every step, with costs measured in USC (US Cents) per kilowatt-hour.
                 </p>
             </div>
 
@@ -25,9 +23,9 @@ export const Power2XBlocksSection = () => {
                             <Zap className="w-4 h-4" />
                             Stage 01
                         </span>
-                        <h3 className="text-2xl font-bold text-[#003366] mt-2">Power Production</h3>
+                        <h3 className="text-2xl font-bold text-[#003366] mt-2">Clean Power Production</h3>
                         <div className="text-4xl font-light text-[#003366] mt-4">1.6 USC</div>
-                        <p className="text-[#003366]/70 mt-3">Solar-powered energy generation using advanced photovoltaic technology</p>
+                        <p className="text-[#003366]/70 mt-3">Harnessing the sun's energy through high-efficiency solar panels</p>
                         <ul className="mt-4 space-y-2 text-sm text-[#003366]/70">
                             <li>• High-efficiency solar arrays</li>
                             <li>• Sustainable energy source</li>

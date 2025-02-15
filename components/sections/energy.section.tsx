@@ -14,21 +14,16 @@ const carouselItems = [
     {
         image: earthInCar,
         title: "Environmental Impact",
-        quote: "We don't have a second PLANET in the trunk.",
-        description: "Join us in our mission to create a sustainable future",
+        quote: "There's no backup planet—sustainable energy is the only way forward. Join us in securing a greener future for Africa.",
+        description: "Our projects offset thousands of tons of CO₂ annually—equivalent to removing thousands of cars from the road.",
     },
     {
         image: KhalidAlFalih,
         title: "Global Investment",
         quote: "Saudi Arabia will launch a renewable energy program in coming weeks that is expected to involve investment of between $30 billion and $50 billion by 2023",
         author: "Energy Minister Khalid al-Falih",
-        description: "Global investments in renewable energy are rapidly increasing",
+        description: "Global investments in renewable energy are rapidly increasing, with major economies committing to sustainable power generation.",
     },
-    // {
-    //     image: "/future.svg",
-    //     title: "Our Mission",
-    //     description: "Together, we can build a sustainable future for generations to come",
-    // },
 ];
 
 export default function EnergySection() {
@@ -36,9 +31,9 @@ export default function EnergySection() {
         <section className="relative w-full py-20 bg-white text-[#0A3D91] overflow-hidden flex items-center">
             <div className="container mx-auto px-6 flex flex-col items-center justify-between">
                 <div className="flex flex-col mb-24 w-full">
-                    <h1 className="text-3xl md:text-5xl font-bold mb-4">Sustainable Energy Solutions</h1>
+                    <h1 className="text-3xl md:text-5xl font-bold mb-4">Powering a Sustainable Future</h1>
                     <p className="text-lg md:text-xl text-[#0A3D91]/80">
-                        Powering Africa's Future Through Renewable Energy
+                        Leading Africa's transition to clean energy through innovative solar solutions and strategic partnerships
                     </p>
                 </div>
 

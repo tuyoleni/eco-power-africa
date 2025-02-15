@@ -44,22 +44,22 @@ export default function BusinessCaseSection() {
     };
 
     return (
-        <section className="relative w-full">
+        <section className="container mx-auto relative w-full">
             {/* Hero Section */}
-            <div className="relative h-[60vh] flex items-center">
+            <div className="relative h-[60vh] flex items-center rounded-md">
                 <div className="absolute inset-0">
                     <Image
                         src={arialView}
                         alt="Solar Farm Aerial View"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-md"
                         fill
                         priority
                         sizes="100vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#0A3D91]/90" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#0A3D91]/90 rounded-md" />
                 </div>
 
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="px-6 relative z-10">
                     <div className="max-w-4xl text-left">
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                             Business Case
@@ -108,9 +108,6 @@ export default function BusinessCaseSection() {
                     </div>
                     <div id="business-case-ppa">
                         <BusinessCasePPASection />
-                    </div>
-                    <div id="business-case-development">
-                        <BusinessCaseDevelopmentSection />
                     </div>
                 </div>
             </div>

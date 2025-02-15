@@ -21,9 +21,9 @@ export default function HeroSection() {
                 {/* Main Content */}
                 <div className="max-w-3xl text-center mt-56">
                     <h1 className="text-5xl font-bold mb-6">ECO POWER AFRICA</h1>
-                    <p className="text-2xl mb-8">Powering Namibia's sustainable future with innovative solar solutions</p>
+                    <p className="text-2xl mb-8">Empowering Namibia with clean, cost-effective, and scalable solar energy—pioneering Africa's renewable revolution</p>
                     <Button className="bg-white text-black px-2 py-6 text-lg hover:bg-white/90 rounded-full">
-                        <span className="ml-4">Explore Solutions</span>
+                        <span className="ml-4">Discover Our Impact</span>
                         <span className="ml-2 bg-black/10 p-2 rounded-full">
                             <ArrowRight className="w-5 h-5" />
                         </span>
@@ -44,8 +44,8 @@ export default function HeroSection() {
                                 />
                             </div>
                             <div className="flex-1 text-left">
-                                <h3 className="font-semibold mb-2 text-gray-900 text-lg">Endless Solar Power</h3>
-                                <p className="text-base text-gray-700">Sun delivers per Square Meter in One Year the energy equivalent of 120 Litre Diesel</p>
+                                <h3 className="font-semibold mb-2 text-gray-900 text-lg">Sustainable Power Generation</h3>
+                                <p className="text-base text-gray-700">Harnessing solar power effectively means replacing 120 liters of diesel per square meter annually, providing a cleaner and more cost-effective energy solution</p>
                             </div>
                         </div>
                     </Card>
@@ -57,7 +57,7 @@ export default function HeroSection() {
                                 <DollarSign className="w-10 h-10 text-gray-900" />
                             </div>
                             <span className="text-3xl font-bold mb-1 text-gray-900">200 MWp</span>
-                            <p className="text-base text-gray-700">Phase 1 Solar Power Plant</p>
+                            <p className="text-base text-gray-700">Initial Phase Investment</p>
                         </div>
                     </Card>
 
@@ -73,8 +73,8 @@ export default function HeroSection() {
                                 />
                             </div>
                             <div className="text-left">
-                                <h3 className="font-semibold mb-1 text-gray-900 text-lg">Proven Track Record</h3>
-                                <p className="text-base text-gray-700">Over 2.5 GWp installed across various projects worldwide</p>
+                                <h3 className="font-semibold mb-1 text-gray-900 text-lg">Global Impact</h3>
+                                <p className="text-base text-gray-700">Proven success: Over 2.5 GWp installed globally, accelerating Africa's transition to renewable energy</p>
                             </div>
                         </div>
                     </Card>
