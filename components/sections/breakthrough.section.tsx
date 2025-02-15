@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { Spain } from '@/public/assets';
+import { spain } from '@/public/assets';
 
 const Map = dynamic(() => import('../map'), { ssr: false });
 
@@ -58,7 +58,7 @@ export default function BreakthroughSection() {
                             {/* Image Section */}
                             <div className="relative h-[300px] lg:h-full lg:w-[40%] w-full">
                                 <Image
-                                    src={Spain}
+                                    src={spain}
                                     alt="Solar Power Plant in Spain"
                                     fill
                                     className="object-cover"
