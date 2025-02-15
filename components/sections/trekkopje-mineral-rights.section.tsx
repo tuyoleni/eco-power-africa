@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Map from '../map';
 import { LatLngExpression } from 'leaflet';
 
 export const TrekkopjeMineralRightsSection = () => {
-    const [showFarmInfo, setShowFarmInfo] = useState(true);
 
     // Actual coordinates for Trekkopje Area based on Google Earth data
     const trekkopjeCoordinates: LatLngExpression[] = [

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import BusinessCaseDevelopmentSection from "./business-case-development.section";
 import BusinessCaseFinanceSection from "./business-case-finance.section";
 import BusinessCasePPASection from "./business-case-ppa.section";
 import { arialView } from "@/public/assets";
@@ -12,7 +11,7 @@ const cardData = [
         subValue: "Megawatt Peak Capacity",
         description: "Total licensed generation capacity for sustainable power production across multiple phases",
         details: "Scalable infrastructure designed for maximum efficiency",
-        section: "finance", // Ensure this links to the correct section
+        section: "finance",
         icon: Zap
     },
     {
@@ -21,7 +20,7 @@ const cardData = [
         subValue: "Build, Own & Operate Model",
         description: "Long-term sustainable operation model with guaranteed performance",
         details: "25-year commitment to operational excellence",
-        section: "ppa", // Ensure this links to the correct section
+        section: "ppa",
         icon: Factory
     },
     {
@@ -30,7 +29,7 @@ const cardData = [
         subValue: "TREKKOPJE Area",
         description: "Strategic location with optimal solar radiation and existing infrastructure",
         details: "Comprehensive development plan with overlapping interests",
-        section: "development", // Ensure this links to the correct section
+        section: "development",
         icon: Database
     },
 ];
@@ -65,7 +64,7 @@ export default function BusinessCaseSection() {
                             Business Case
                         </h2>
                         <p className="text-[#fff]/70 mt-6 max-w-3xl text-lg">
-                            A comprehensive solar power initiative driving Namibia's sustainable energy future through innovative infrastructure and strategic partnerships
+                            A comprehensive solar power initiative driving Namibia&apos;s sustainable energy future through innovative infrastructure and strategic partnerships
                         </p>
                     </div>
                 </div>

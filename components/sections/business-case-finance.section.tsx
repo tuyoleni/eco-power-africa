@@ -1,37 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
 
 export const BusinessCaseFinanceSection = () => {
     return (
         <section className="w-full py-16">
             <div className="container mx-auto px-6">
-                {/* Header with improved spacing and hierarchy */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
-                    <div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#003366]">
-                            Business Case
-                        </h2>
-                        <p className="text-[#003366]/70 mt-2">Build-Own-Operate Model</p>
-                    </div>
-                    <div className="flex items-center gap-4">
-                        <div className="text-right">
-                            <div className="text-lg font-medium">ECO POWER AFRICA</div>
-                            <div className="text-sm text-[#003366]/70">NAMIBIA INVEST CC</div>
-                        </div>
-                        <Image
-                            src="/eco-power-logo.png"
-                            alt="Eco Power Africa Logo"
-                            width={48}
-                            height={48}
-                            className="object-contain"
-                        />
-                    </div>
-                </div>
 
                 {/* Main Content with Grid Layout */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Project Overview Card */}
-                    <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-2xl p-8">
                         <h3 className="text-xl font-semibold text-[#003366] mb-6">Generation Capacity</h3>
                         <div className="space-y-4">
                             <div>
@@ -46,7 +23,7 @@ export const BusinessCaseFinanceSection = () => {
                     </div>
 
                     {/* Investment Structure Card */}
-                    <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-2xl p-8">
                         <h3 className="text-xl font-semibold text-[#003366] mb-6">Investment Structure</h3>
                         <div className="space-y-6">
                             <div className="flex items-end gap-4">
@@ -75,7 +52,7 @@ export const BusinessCaseFinanceSection = () => {
                     </div>
 
                     {/* Benefits Card */}
-                    <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-2xl p-8">
                         <h3 className="text-xl font-semibold text-[#003366] mb-6">Key Benefits</h3>
                         <div className="space-y-6">
                             {[
@@ -93,7 +70,7 @@ export const BusinessCaseFinanceSection = () => {
                                 },
                             ].map((benefit, index) => (
                                 <div key={index} className="group flex items-start gap-4">
-                                    <div className="w-8 h-8 rounded-lg bg-[#003366]/10 flex items-center justify-center text-[#003366] group-hover:bg-[#003366] group-hover:text-white transition-colors">
+                                    <div className="w-8 h-8 rounded-lg bg-[#003366]/10 flex items-center justify-center text-[#003366]">
                                         {index + 1}
                                     </div>
                                     <div>
@@ -104,6 +81,11 @@ export const BusinessCaseFinanceSection = () => {
                             ))}
                         </div>
                     </div>
+                </div>
+                <div className="mt-16 max-w-3xl">
+                    <p className="text-[#003366]/70 leading-relaxed">
+                        The financial structure is designed to maximize project sustainability and investor returns. With a total capacity of 2,000 MWp implemented across ten strategic phases, each requiring USD 180M investment, we maintain a balanced 70/30 debt-to-equity ratio. This approach, combined with our 25-year Power Purchase Agreement, ensures long-term stability and predictable revenue streams while minimizing operational costs through efficient solar technology deployment.
+                    </p>
                 </div>
             </div>
         </section>

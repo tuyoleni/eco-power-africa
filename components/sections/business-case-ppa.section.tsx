@@ -42,7 +42,7 @@ export const BusinessCasePPASection = () => {
                     Power Purchase Agreement
                 </h2>
                 <p className="text-[#003366]/70 text-xl mt-6 max-w-3xl">
-                    Our Build-Own-Operate Model ensures long-term sustainable energy supply through 
+                    Our Build-Own-Operate Model ensures long-term sustainable energy supply through
                     strategic partnerships and efficient infrastructure management.
                 </p>
             </div>
@@ -78,14 +78,14 @@ export const BusinessCasePPASection = () => {
                                 <div>
                                     <p className="font-medium mb-2">Sustainable Generation</p>
                                     <p className="text-sm leading-relaxed">
-                                        State-of-the-art solar installation with 2,000 MWp capacity, 
+                                        State-of-the-art solar installation with 2,000 MWp capacity,
                                         providing clean and reliable energy.
                                     </p>
                                 </div>
                                 <div>
                                     <p className="font-medium mb-2">Long-term Commitment</p>
                                     <p className="text-sm leading-relaxed">
-                                        25-year agreement ensuring stable energy supply and 
+                                        25-year agreement ensuring stable energy supply and
                                         infrastructure maintenance.
                                     </p>
                                 </div>
@@ -98,14 +98,14 @@ export const BusinessCasePPASection = () => {
                                 <div>
                                     <p className="font-medium mb-2">Predictable Costs</p>
                                     <p className="text-sm leading-relaxed">
-                                        Stable, long-term energy pricing structure with 
+                                        Stable, long-term energy pricing structure with
                                         transparent terms and conditions.
                                     </p>
                                 </div>
                                 <div>
                                     <p className="font-medium mb-2">Infrastructure Support</p>
                                     <p className="text-sm leading-relaxed">
-                                        Seamless integration with existing systems and 
+                                        Seamless integration with existing systems and
                                         guaranteed performance standards.
                                     </p>
                                 </div>
@@ -115,8 +115,8 @@ export const BusinessCasePPASection = () => {
 
                     <div className="mt-12 pt-8 border-t border-white/10">
                         <p className="text-sm text-white/80">
-                            <span className="font-medium">Note:</span> Our PPA structure is designed 
-                            to support Namibia's renewable energy goals while providing partners with 
+                            <span className="font-medium">Note:</span> Our PPA structure is designed
+                            to support Namibia&apos;s renewable energy goals while providing partners with
                             reliable, sustainable power solutions.
                         </p>
                     </div>

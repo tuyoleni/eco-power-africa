@@ -21,7 +21,7 @@ export default function HeroSection() {
                 {/* Main Content */}
                 <div className="max-w-3xl text-center mt-56">
                     <h1 className="text-5xl font-bold mb-6">ECO POWER AFRICA</h1>
-                    <p className="text-2xl mb-8">Empowering Namibia with clean, cost-effective, and scalable solar energy—pioneering Africa's renewable revolution</p>
+                    <p className="text-2xl mb-8">Empowering Namibia with clean, cost-effective, and scalable solar energy&mdash;pioneering Africa&apos;s renewable revolution</p>
                     <Button className="bg-white text-black px-2 py-6 text-lg hover:bg-white/90 rounded-full">
                         <span className="ml-4">Discover Our Impact</span>
                         <span className="ml-2 bg-black/10 p-2 rounded-full">
@@ -74,7 +74,7 @@ export default function HeroSection() {
                             </div>
                             <div className="text-left">
                                 <h3 className="font-semibold mb-1 text-gray-900 text-lg">Global Impact</h3>
-                                <p className="text-base text-gray-700">Proven success: Over 2.5 GWp installed globally, accelerating Africa's transition to renewable energy</p>
+                                <p className="text-base text-gray-700">Proven success: Over 2.5 GWp installed globally, accelerating Africa&apos;s transition to renewable energy</p>
                             </div>
                         </div>
                     </Card>

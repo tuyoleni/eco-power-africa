@@ -2,7 +2,6 @@
 
 import HeroSection from "@/components/sections/hero.section";
 import EnergySection from "@/components/sections/energy.section";
-import SunSection from "@/components/sections/sun.section";
 import BusinessCaseSection from "@/components/sections/business-case.section";
 import QualitySection from "@/components/sections/quality.section";
 import Power2XBlocksSection from "@/components/sections/power2x-blocks.section";
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      {/* <SunSection /> */}
       <EnergySection />
       <BusinessCaseSection />
       <Power2XBlocksSection />

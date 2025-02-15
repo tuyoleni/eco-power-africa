@@ -1,7 +1,6 @@
 import React from 'react';
 import Map from '../map';
 import { LatLngTuple } from 'leaflet';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const WorldSolarPlantSection = () => {
     const center: LatLngTuple = [35.3880, -120.0726];

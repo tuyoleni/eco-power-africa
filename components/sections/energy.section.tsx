@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     Carousel,
     CarouselContent,
@@ -14,8 +15,8 @@ const carouselItems = [
     {
         image: earthInCar,
         title: "Environmental Impact",
-        quote: "There's no backup planet—sustainable energy is the only way forward. Join us in securing a greener future for Africa.",
-        description: "Our projects offset thousands of tons of CO₂ annually—equivalent to removing thousands of cars from the road.",
+        quote: "There&apos;s no backup planet&mdash;sustainable energy is the only way forward. Join us in securing a greener future for Africa.",
+        description: "Our projects offset thousands of tons of CO₂ annually&mdash;equivalent to removing thousands of cars from the road.",
     },
     {
         image: KhalidAlFalih,
@@ -33,7 +34,7 @@ export default function EnergySection() {
                 <div className="flex flex-col mb-24 w-full">
                     <h1 className="text-3xl md:text-5xl font-bold mb-4">Powering a Sustainable Future</h1>
                     <p className="text-lg md:text-xl text-[#0A3D91]/80">
-                        Leading Africa's transition to clean energy through innovative solar solutions and strategic partnerships
+                        Leading Africa&apos;s transition to clean energy through innovative solar solutions and strategic partnerships
                     </p>
                 </div>
 
@@ -84,7 +85,7 @@ export default function EnergySection() {
                                                     <h3 className="text-2xl md:text-3xl font-bold text-left">{item.title}</h3>
                                                     {item.quote && (
                                                         <blockquote className="text-lg md:text-xl font-medium text-left">
-                                                            "{item.quote}"
+                                                            &ldquo;{item.quote}&rdquo;
                                                             {item.author && (
                                                                 <footer className="text-sm mt-2 text-[#0A3D91]/60">
                                                                     - {item.author}
