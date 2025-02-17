@@ -8,7 +8,7 @@ const BreakthroughSection = dynamic(() => import("@/components/sections/breakthr
 const PowerhouseSection = dynamic(() => import("@/components/sections/powerhouse.section"), { ssr: false });
 const WorldSolarPlantSection = dynamic(() => import("@/components/sections/world-solar-plant.section"), { ssr: false });
 const GolmudChinaSection = dynamic(() => import("@/components/sections/golmud-china.section"), { ssr: false });
-const BusinessCaseDevelopmentSection = dynamic(() => import("@/components/sections/business-case-development.section"), { ssr: false });
+// const BusinessCaseDevelopmentSection = dynamic(() => import("@/components/sections/business-case-development.section"), { ssr: false });
 const TrekkopjeMineralRightsSection = dynamic(() => import("@/components/sections/trekkopje-mineral-rights.section"), { ssr: false });
 
 export default function ProjectsPage() {
@@ -18,11 +18,11 @@ export default function ProjectsPage() {
             <WorldSolarPlantSection />
             <GolmudChinaSection />
             <BreakthroughSection />
-            <PowerhouseSection />
             <TrekkopjeMineralRightsSection />
+            <PowerhouseSection />
             {/* <ProductionCostSection /> */}
             {/* <RenewableFutureSection /> */}
-            <BusinessCaseDevelopmentSection />
+            {/* <BusinessCaseDevelopmentSection /> */}
             {/* <DesalinationPlantSection /> */}
         </main>
     );

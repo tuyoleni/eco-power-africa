@@ -15,8 +15,8 @@ const carouselItems = [
     {
         image: earthInCar,
         title: "Environmental Impact",
-        quote: "There&apos;s no backup planet&mdash;sustainable energy is the only way forward. Join us in securing a greener future for Africa.",
-        description: "Our projects offset thousands of tons of CO₂ annually&mdash;equivalent to removing thousands of cars from the road.",
+        quote: "There's no backup planet sustainable energy is the only way forward. Join us in securing a greener future for Africa.",
+        description: "Our projects offset thousands of tons of CO₂ annually equivalent to removing thousands of cars from the road.",
     },
     {
         image: KhalidAlFalih,
@@ -29,12 +29,12 @@ const carouselItems = [
 
 export default function EnergySection() {
     return (
-        <section className="relative w-full py-20 bg-white text-[#0A3D91] overflow-hidden flex items-center">
-            <div className="container mx-auto px-6 flex flex-col items-center justify-between">
+        <section className="relative w-full py-20 bg-white text-[#003366] overflow-hidden flex items-center">
+            <div className="container mx-auto px-8 max-w-7xl flex flex-col items-center justify-between">
                 <div className="flex flex-col mb-24 w-full">
-                    <h1 className="text-3xl md:text-5xl font-bold mb-4">Powering a Sustainable Future</h1>
-                    <p className="text-lg md:text-xl text-[#0A3D91]/80">
-                        Leading Africa&apos;s transition to clean energy through innovative solar solutions and strategic partnerships
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Powering a Sustainable Future</h1>
+                    <p className="text-xl text-[#003366]/70">
+                        Leading Africas transition to clean energy through innovative solar solutions and strategic partnerships
                     </p>
                 </div>
 
@@ -53,19 +53,19 @@ export default function EnergySection() {
                             <CarouselNext />
                         </div>
                         <div className="md:hidden absolute -top-8 flex gap-2">
-                            <div className="text-sm text-[#0A3D91]/60">
+                            <div className="text-sm text-[#003366]/50">
                                 Swipe to explore →
                             </div>
                         </div>
                         <CarouselContent className="-ml-2 md:-ml-4">
                             {carouselItems.map((item, index) => (
-                                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-3/4 md:pr-16">
+                                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-3/4 pr-12">
                                     <Card className="p-8 transition-opacity duration-300 hover:opacity-100 border-none shadow-none h-full">
-                                        <div className="flex flex-col gap-12 h-full">
-                                            <div className="flex flex-col md:flex-row gap-12 items-start flex-1">
+                                        <div className="flex flex-col gap-16 h-full">
+                                            <div className="flex flex-col md:flex-row gap-16 items-start flex-1">
                                                 <div className="md:w-1/2">
                                                     <div className="relative aspect-[4/3] w-full group">
-                                                        <div className="absolute inset-0 rounded-xl"></div>
+                                                        <div className="absolute inset-0 rounded-lg"></div>
                                                         <Image
                                                             radius="md"
                                                             isBlurred={true}
@@ -75,19 +75,19 @@ export default function EnergySection() {
                                                         />
                                                     </div>
                                                     <div className="mt-4">
-                                                        <p className="text-base text-[#0A3D91]/70 text-left">
+                                                        <p className="text-base text-[#003366]/70 text-left">
                                                             {item.description}
                                                         </p>
                                                     </div>
                                                 </div>
 
                                                 <div className="md:w-1/2 space-y-4">
-                                                    <h3 className="text-2xl md:text-3xl font-bold text-left">{item.title}</h3>
+                                                    <h3 className="text-2xl font-bold text-left">{item.title}</h3>
                                                     {item.quote && (
-                                                        <blockquote className="text-lg md:text-xl font-medium text-left">
+                                                        <blockquote className="text-xl font-medium text-left">
                                                             &ldquo;{item.quote}&rdquo;
                                                             {item.author && (
-                                                                <footer className="text-sm mt-2 text-[#0A3D91]/60">
+                                                                <footer className="text-sm mt-2 text-[#003366]/50">
                                                                     - {item.author}
                                                                 </footer>
                                                             )}

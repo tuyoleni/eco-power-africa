@@ -3,6 +3,7 @@ import { LineChart } from "@/components/ui/line-chart";
 import type { ChartData, ChartOptions } from 'chart.js';
 
 export const ProductionCostSection = () => {
+
     const chartData: ChartData<'line'> = {
         labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020', '2025', '2030'],
         datasets: [
@@ -29,7 +30,6 @@ export const ProductionCostSection = () => {
                     color: '#E5E7EB',
                 },
                 ticks: {
-
                     font: {
                         size: 12,
                     },
@@ -69,47 +69,59 @@ export const ProductionCostSection = () => {
     };
 
     return (
-        <section className="relative w-full bg-white px-6 py-16">
-            <div className="max-w-7xl mx-auto">
-                <div className="max-w-3xl">
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#003366] mb-6 text-left">
-                        Solar Energy Cost Development
-                    </h2>
-                    <p className="text-lg text-[#003366]/70 leading-relaxed text-left mb-8">
-                        From an expensive alternative to the world&apos;s most affordable energy source—solar power costs have dropped by over 90% since 1990 and are projected to fall below 1 US cent per kWh by 2030, making it the most economical choice for sustainable power generation.
-                    </p>
-                </div>
+        <section className="relative w-full py-20 bg-gradient-to-b from-white to-white/10 text-[#003366] overflow-hidden">
+            <div className="container mx-auto px-8">
+                <div className="max-w-7xl mx-auto">
+                    {/* Section Header */}
+                    <div className="mb-24">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+                            Solar Energy Cost Development
+                        </h2>
+                        <p className="text-xl text-[#003366]/70">
+                            From an expensive alternative to the world&apos;s most affordable energy source
+                        </p>
+                    </div>
 
-                <div className="mt-12">
-                    <div className="bg-white">
-                        <div className="h-[500px]">
+                    {/* Main Content */}
+                    <div className="grid md:grid-cols-2 gap-16 items-center">
+                        {/* Left Column - Chart */}
+                        <div className="relative aspect-[4/3] w-full bg-white p-8">
                             <LineChart
                                 data={chartData}
                                 options={chartOptions}
                             />
                         </div>
-                    </div>
-                </div>
 
-                <div className="mt-12 max-w-3xl">
-                    <div className="grid grid-cols-2 gap-16">
-                        <div className="flex items-start gap-4">
-                            <div className="text-6xl font-bold text-[#003366]">1.5</div>
-                            <div className="mt-2">
-                                <div className="text-2xl text-[#003366]/80">US cents</div>
-                                <div className="text-xl text-[#003366]/70">Current Production Cost</div>
-                                <p className="text-base text-[#003366]/60 mt-1">
-                                    Already competitive with traditional energy sources
+                        {/* Right Column - Content */}
+                        <div className="space-y-6">
+                            <div>
+                                <h3 className="text-2xl font-bold mb-4">Cost Evolution</h3>
+                                <p className="text-base text-[#003366]/70">
+                                    Solar power costs have dropped by over 90% since 1990 and are projected
+                                    to fall below 1 US cent per kWh by 2030, making it the most economical
+                                    choice for sustainable power generation.
                                 </p>
                             </div>
-                        </div>
-                        <div className="flex items-start gap-4">
-                            <div className="text-6xl font-bold text-[#003366]">1</div>
-                            <div className="mt-2">
-                                <div className="text-2xl text-[#003366]/80">US cent</div>
-                                <div className="text-xl text-[#003366]/70">by 2030</div>
-                                <p className="text-base text-[#003366]/60 mt-1">
-                                    Making it the most economical energy source
+
+                            {/* Key Statistics */}
+                            <div className="grid grid-cols-2 gap-12 py-6">
+                                <div>
+                                    <div className="text-2xl font-bold text-[#003366]">1.5¢</div>
+                                    <p className="text-sm text-[#003366]/50">Current Cost per kWh</p>
+                                </div>
+                                <div>
+                                    <div className="text-2xl font-bold text-[#003366]">1.0¢</div>
+                                    <p className="text-sm text-[#003366]/50">Projected 2030 Cost</p>
+                                </div>
+                            </div>
+
+                            {/* Additional Information */}
+                            <div>
+                                <h4 className="text-xl font-medium mb-3">Economic Impact</h4>
+                                <p className="text-base text-[#003366]/70">
+                                    This significant cost reduction makes solar power increasingly competitive
+                                    with traditional energy sources, driving the global transition to
+                                    sustainable energy solutions.
                                 </p>
                             </div>
                         </div>

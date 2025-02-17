@@ -1,24 +1,28 @@
 'use client'
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
+import { logo } from "@/public/assets";
 
 // Navigation data
 const navigationLinks = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects & References" },
+  { href: "/vision", label: "Vision" },
+  { href: "/projects", label: "Projects" },
+  // { href: "/contact", label: "Contact" },
 ];
 
 export default function AppNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white shadow-sm">
+    <nav className="w-full backdrop-blur-2xl sticky top-0 z-50 bg-white/20">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold">
-              Eco Power Africa
+            <Link href="/">
+              <Image src={logo} alt="Eco Power Africa Logo" width={60} height={50} />
             </Link>
           </div>
 

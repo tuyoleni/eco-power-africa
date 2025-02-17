@@ -4,16 +4,10 @@ import Link from "next/link";
 
 const footerLinks = {
   company: [
-    { href: "/", text: "Home" },
-    { href: "/projects", text: "Projects" },
-  ],
-  resources: [
-    { href: "/renewable-future", text: "Renewable Future" },
-    { href: "/production-cost", text: "Production Costs" },
-  ],
-  legal: [
-    { href: "/privacy", text: "Privacy Policy" },
-    { href: "/terms", text: "Terms of Service" },
+    { href: "/", label: "Home" },
+    { href: "/vision", label: "Vision" },
+    { href: "/projects", label: "Projects" },
+    // { href: "/contact", label: "Contact" },
   ]
 };
 
@@ -43,7 +37,7 @@ export default function AppFooter() {
                     href={link.href}
                     className="text-white/70 hover:text-white transition-colors text-sm"
                   >
-                    {link.text}
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -51,7 +45,7 @@ export default function AppFooter() {
           </div>
 
           {/* Resources */}
-          <div>
+          {/* <div>
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -65,10 +59,10 @@ export default function AppFooter() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Legal */}
-          <div>
+          {/* <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
@@ -82,7 +76,7 @@ export default function AppFooter() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}

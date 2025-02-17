@@ -41,7 +41,7 @@ export const BusinessCasePPASection = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-[#003366]">
                     Power Purchase Agreement
                 </h2>
-                <p className="text-[#003366]/70 text-xl mt-6 max-w-3xl">
+                <p className="text-xl mt-6 max-w-3xl text-[#003366]/70">
                     Our Build-Own-Operate Model ensures long-term sustainable energy supply through
                     strategic partnerships and efficient infrastructure management.
                 </p>
