@@ -43,7 +43,7 @@ export default function BusinessCaseSection() {
     // };
 
     return (
-        <section className="container mx-auto relative w-full">
+        <section className="container mx-auto relative w-full p-4">
             {/* Hero Section */}
             <div className="relative h-[60vh] flex items-end rounded-lg">
                 <div className="absolute inset-0">
@@ -58,7 +58,7 @@ export default function BusinessCaseSection() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-[#003366]/90 rounded-lg" />
                 </div>
 
-                <div className="px-8 pb-8 relative z-10">
+                <div className="px-4 md:px-8 pb-4 md:pb-8 relative z-10">
                     <div className="max-w-3xl text-left">
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                             Business Case

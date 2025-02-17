@@ -29,9 +29,9 @@ const carouselItems = [
 
 export default function EnergySection() {
     return (
-        <section className="relative w-full py-20 bg-white text-[#003366] overflow-hidden flex items-center">
-            <div className="container mx-auto px-8 max-w-7xl flex flex-col items-center justify-between">
-                <div className="flex flex-col mb-24 w-full">
+        <section className="relative w-full py-12 md:py-20 bg-white text-[#003366] overflow-hidden flex items-center">
+            <div className="container mx-auto px-4 md:px-8 max-w-7xl flex flex-col items-center justify-between">
+                <div className="flex flex-col mb-12 md:mb-24 w-full">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Powering a Sustainable Future</h1>
                     <p className="text-xl text-[#003366]/70">
                         Leading Africas transition to clean energy through innovative solar solutions and strategic partnerships
@@ -59,10 +59,10 @@ export default function EnergySection() {
                         </div>
                         <CarouselContent className="-ml-2 md:-ml-4">
                             {carouselItems.map((item, index) => (
-                                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-3/4 pr-12">
-                                    <Card className="p-8 transition-opacity duration-300 hover:opacity-100 border-none shadow-none h-full">
-                                        <div className="flex flex-col gap-16 h-full">
-                                            <div className="flex flex-col md:flex-row gap-16 items-start flex-1">
+                                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-3/4 md:pr-12">
+                                    <Card className="p-4 md:p-8 transition-opacity duration-300 hover:opacity-100 border-none shadow-none h-full">
+                                        <div className="flex flex-col gap-8 md:gap-16 h-full">
+                                            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start flex-1">
                                                 <div className="md:w-1/2">
                                                     <div className="relative aspect-[4/3] w-full group">
                                                         <div className="absolute inset-0 rounded-lg"></div>

@@ -11,7 +11,7 @@ export default function Vision() {
     return (
         <section className="container mx-auto relative w-full bg-white py-20">
             {/* Header */}
-            <div className="px-8 mb-24">
+            <div className="px-4 md:px-8 mb-24">
                 <h2 className="text-4xl md:text-5xl font-bold text-[#003366]">
                     Our Vision
                 </h2>
@@ -20,9 +20,9 @@ export default function Vision() {
                 </p>
             </div>
 
-            <div className="max-w-7xl mx-auto px-8">
+            <div className="max-w-7xl mx-auto px-4 md:px-8">
                 {/* Vision Blocks */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 mb-24">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 mb-24">
                     {/* Block 1 */}
                     <div>
                         <span className="text-sm font-medium text-[#003366]/50 flex items-center gap-2">
@@ -110,14 +110,14 @@ export default function Vision() {
                 </div>
 
                 {/* Additional Info Box */}
-                <div className="bg-[#003366] rounded-lg p-8 text-white">
+                <div className="bg-[#003366] rounded-lg p-4 md:p-8 text-white">
                     <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
                         <Globe className="w-6 h-6" />
                         Our Commitment
                     </h3>
 
-                    <div className="grid md:grid-cols-2 gap-12 divide-x divide-white/10">
-                        <div className="pr-12">
+                    <div className="grid md:grid-cols-2 gap-8 md:gap-12 md:divide-x divide-white/10">
+                        <div className="md:pr-12">
                             <h4 className="text-xl font-medium mb-4 flex items-center gap-3">
                                 <Rocket className="w-5 h-5" />
                                 Impact Goals
@@ -144,7 +144,7 @@ export default function Vision() {
                             </div>
                         </div>
 
-                        <div className="pl-12">
+                        <div className="md:pl-12">
                             <h4 className="text-xl font-medium mb-4 flex items-center gap-3">
                                 <LineChart className="w-5 h-5" />
                                 Future Outlook

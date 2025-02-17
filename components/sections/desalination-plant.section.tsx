@@ -5,9 +5,9 @@ import { interior, exterior } from '@/public/assets';
 
 export const DesalinationPlantSection = () => {
     return (
-        <section className="container mx-auto relative w-full bg-white py-20">
+        <section className="container mx-auto relative w-full bg-white py-12 md:py-20">
             {/* Header */}
-            <div className="px-8 mb-24">
+            <div className="px-4 md:px-8 mb-16 md:mb-24">
                 <h2 className="text-4xl md:text-5xl font-bold text-[#003366]">
                     Desalination Infrastructure
                 </h2>
@@ -17,9 +17,9 @@ export const DesalinationPlantSection = () => {
                 </p>
             </div>
 
-            <div className="max-w-7xl mx-auto px-8">
+            <div className="max-w-7xl mx-auto px-4 md:px-8">
                 {/* Process Components */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 mb-24">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 mb-16 md:mb-24">
                     {/* Component 1 */}
                     <div>
                         <span className="text-sm font-medium text-[#003366]/50 flex items-center gap-2">
@@ -70,11 +70,11 @@ export const DesalinationPlantSection = () => {
                 </div>
 
                 {/* Technical Details */}
-                <div className="bg-[#003366] rounded-lg p-8 text-white">
-                    <h3 className="text-2xl font-bold mb-8">Facility Overview</h3>
+                <div className="bg-[#003366] rounded-lg p-4 md:p-8 text-white">
+                    <h3 className="text-2xl font-bold mb-6 md:mb-8">Facility Overview</h3>
 
-                    <div className="grid md:grid-cols-2 gap-12 divide-x divide-white/10">
-                        <div className="pr-12">
+                    <div className="grid md:grid-cols-2 gap-8 md:gap-12 divide-y md:divide-y-0 md:divide-x divide-white/10">
+                        <div className="pb-8 md:pb-0 md:pr-12">
                             <h4 className="text-xl font-medium mb-4">Plant Infrastructure</h4>
                             <div className="space-y-4 text-white/80">
                                 <div className="relative aspect-video rounded-lg overflow-hidden">
@@ -95,7 +95,7 @@ export const DesalinationPlantSection = () => {
                             </div>
                         </div>
 
-                        <div className="pl-12">
+                        <div className="pt-8 md:pt-0 md:pl-12">
                             <h4 className="text-xl font-medium mb-4">Operational Metrics</h4>
                             <div className="space-y-6">
                                 <div>

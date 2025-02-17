@@ -28,11 +28,11 @@ const qualityCards = [
 
 export default function QualitySection() {
     return (
-        <section className="relative w-full py-20 bg-gradient-to-b from-white to-white/10 text-[#003366] overflow-hidden">
-            <div className="container mx-auto px-8">
+        <section className="relative w-full py-12 md:py-20 bg-gradient-to-b from-white to-white/10 text-[#003366] overflow-hidden">
+            <div className="container mx-auto px-4 md:px-8">
                 <div className="max-w-7xl mx-auto">
                     {/* Section Header */}
-                    <div className="mb-24">
+                    <div className="mb-12 md:mb-24">
                         <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
                             High quality for life-cycle costing benefits
                         </h2>
@@ -42,11 +42,11 @@ export default function QualitySection() {
                     </div>
 
                     {/* Quality Cards Grid */}
-                    <div className="grid md:grid-cols-3 gap-16">
+                    <div className="grid md:grid-cols-3 gap-12 md:gap-24">
                         {qualityCards.map((card, index) => {
                             const Icon = card.icon;
                             return (
-                                <div key={index} className="space-y-6">
+                                <div key={index} className="space-y-8">
                                     <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-2xl">
                                         <Image
                                             src={card.image}
@@ -71,7 +71,7 @@ export default function QualitySection() {
                     </div>
 
                     {/* Additional Information */}
-                    <div className="max-w-3xl mt-24">
+                    <div className="max-w-3xl mt-12 md:mt-24">
                         <h3 className="text-2xl font-bold mb-6">
                             Quality Assurance
                         </h3>

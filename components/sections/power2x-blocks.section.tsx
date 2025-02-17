@@ -5,7 +5,7 @@ export const Power2XBlocksSection = () => {
     return (
         <section className="container mx-auto relative w-full bg-white py-20">
             {/* Header */}
-            <div className="px-8 mb-24">
+            <div className="px-4 md:px-8 mb-24">
                 <h2 className="text-4xl md:text-5xl font-bold text-[#003366]">
                     Power2X Process
                 </h2>
@@ -14,9 +14,9 @@ export const Power2XBlocksSection = () => {
                 </p>
             </div>
 
-            <div className="max-w-7xl mx-auto px-8">
+            <div className="max-w-7xl mx-auto px-4 md:px-8">
                 {/* Process Steps */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 mb-24">
                     {/* Step 1 */}
                     <div>
                         <span className="text-sm font-medium text-[#003366]/50 flex items-center gap-2">
@@ -83,11 +83,11 @@ export const Power2XBlocksSection = () => {
                 </div>
 
                 {/* Engineering Notes */}
-                <div className="bg-[#003366] rounded-lg p-8 text-white">
+                <div className="bg-[#003366] rounded-lg p-4 md:p-8 text-white">
                     <h3 className="text-2xl font-bold mb-8">Technical Specifications & Targets</h3>
 
-                    <div className="grid md:grid-cols-2 gap-12 divide-x divide-white/10">
-                        <div className="pr-12">
+                    <div className="grid md:grid-cols-2 gap-8 md:gap-12 divide-y md:divide-y-0 md:divide-x divide-white/10">
+                        <div className="md:pr-12">
                             <h4 className="text-xl font-medium mb-4">Development Status</h4>
                             <div className="space-y-4 text-white/80">
                                 <div>
@@ -103,7 +103,7 @@ export const Power2XBlocksSection = () => {
                             </div>
                         </div>
 
-                        <div className="pl-12">
+                        <div className="pt-8 md:pt-0 md:pl-12">
                             <h4 className="text-xl font-medium mb-4">Economic Targets</h4>
                             <div className="space-y-6">
                                 <div>
@@ -126,7 +126,7 @@ export const Power2XBlocksSection = () => {
                         </div>
                     </div>
 
-                    <div className="mt-12 pt-8 border-t border-white/10">
+                    <div className="mt-8 md:mt-12 pt-8 border-t border-white/10">
                         <p className="text-sm text-white/80">
                             <span className="font-medium">Important Note:</span> All power production and processing costs are
                             expressed in USC (US Cents) per kilowatt-hour. Final pricing excludes applicable subsidies and

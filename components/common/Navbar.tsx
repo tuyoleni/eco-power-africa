@@ -16,12 +16,16 @@ const navigationLinks = [
 export default function AppNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="w-full backdrop-blur-2xl sticky top-0 z-50 bg-white/20">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link href="/">
+            <Link href="/" onClick={handleLinkClick}>
               <Image src={logo} alt="Eco Power Africa Logo" width={60} height={50} />
             </Link>
           </div>
@@ -33,6 +37,7 @@ export default function AppNavbar() {
                 key={href}
                 href={href}
                 className="text-gray-600 hover:text-gray-900"
+                onClick={handleLinkClick}
               >
                 {label}
               </Link>
@@ -73,6 +78,7 @@ export default function AppNavbar() {
                   key={href}
                   href={href}
                   className="block px-3 py-2 text-gray-600 hover:text-gray-900"
+                  onClick={handleLinkClick}
                 >
                   {label}
                 </Link>
