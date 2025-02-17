@@ -15,7 +15,7 @@ export default function Home() {
       <HeroSection />
       <EnergySection />
       <BusinessCaseSection />
-      <Power2XBlocksSection />
+      {/* <Power2XBlocksSection /> */}
       {/* <DesalinationPlantSection /> */}
       <ProductionCostSection />
       <QualitySection />

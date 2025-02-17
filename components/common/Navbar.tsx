@@ -10,7 +10,7 @@ const navigationLinks = [
   { href: "/", label: "Home" },
   { href: "/vision", label: "Vision" },
   { href: "/projects", label: "Projects" },
-  // { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function AppNavbar() {
