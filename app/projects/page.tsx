@@ -9,7 +9,7 @@ const PowerhouseSection = dynamic(() => import("@/components/sections/powerhouse
 const WorldSolarPlantSection = dynamic(() => import("@/components/sections/world-solar-plant.section"), { ssr: false });
 const GolmudChinaSection = dynamic(() => import("@/components/sections/golmud-china.section"), { ssr: false });
 // const BusinessCaseDevelopmentSection = dynamic(() => import("@/components/sections/business-case-development.section"), { ssr: false });
-const TrekkopjeMineralRightsSection = dynamic(() => import("@/components/sections/trekkopje-mineral-rights.section"), { ssr: false });
+// const TrekkopjeMineralRightsSection = dynamic(() => import("@/components/sections/trekkopje-mineral-rights.section"), { ssr: false });
 
 export default function ProjectsPage() {
     return (
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
             <WorldSolarPlantSection />
             <GolmudChinaSection />
             <BreakthroughSection />
-            <TrekkopjeMineralRightsSection />
+            {/* <TrekkopjeMineralRightsSection /> */}
             <PowerhouseSection />
             {/* <ProductionCostSection /> */}
             {/* <RenewableFutureSection /> */}

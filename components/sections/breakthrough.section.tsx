@@ -48,8 +48,6 @@ export default function BreakthroughSection() {
                                             weight: 2,
                                             fillOpacity: 0.1
                                         }}
-                                        dragging={true}
-                                        scrollWheelZoom={true}
                                         height="100%"
                                         width="100%"
                                     />

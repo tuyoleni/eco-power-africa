@@ -27,8 +27,6 @@ export const WorldSolarPlantSection = () => {
                                 zoom={13}
                                 height="100%"
                                 width="100%"
-                                dragging={true}
-                                scrollWheelZoom={true}
                                 polygonOptions={{
                                     color: '#003366',
                                     weight: 2,
