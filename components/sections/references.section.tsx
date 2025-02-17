@@ -18,7 +18,7 @@ export default function ReferencesSection() {
 
                     {/* Projects Grid */}
                     <div className="space-y-24">
-                        {portfolioProjects.map((project, index) => (
+                        {portfolioProjects.map((project) => (
                             <div
                                 key={project.id}
                                 className="grid md:grid-cols-2 gap-16 items-center"

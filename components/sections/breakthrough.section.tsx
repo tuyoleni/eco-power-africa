@@ -1,6 +1,4 @@
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
-import { spain } from '@/public/assets';
 
 const Map = dynamic(() => import('../map'), { ssr: false });
 
